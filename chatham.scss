@@ -1,0 +1,219 @@
+@font-face {
+    font-family: "Zing Rust Base";
+    src: url("https://db.onlinewebfonts.com/t/ec11ddc9fa834d65ab94debb6af73080.eot");
+    src: url("https://db.onlinewebfonts.com/t/ec11ddc9fa834d65ab94debb6af73080.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/ec11ddc9fa834d65ab94debb6af73080.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/ec11ddc9fa834d65ab94debb6af73080.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/ec11ddc9fa834d65ab94debb6af73080.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/ec11ddc9fa834d65ab94debb6af73080.svg#Zing Rust Base")format("svg");
+}
+
+@font-face {
+    font-family: "Muli";
+    src: url("https://db.onlinewebfonts.com/t/fe82d4bebb545cd0d8c9683e258e961c.eot");
+    src: url("https://db.onlinewebfonts.com/t/fe82d4bebb545cd0d8c9683e258e961c.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/fe82d4bebb545cd0d8c9683e258e961c.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/fe82d4bebb545cd0d8c9683e258e961c.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/fe82d4bebb545cd0d8c9683e258e961c.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/fe82d4bebb545cd0d8c9683e258e961c.svg#Muli")format("svg");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+@use 'node_modules/@awesome.me/kit-6d19f17a5c/scss/variables' with (
+  // customizing $font-path
+  $font-path: 'fontawesome/webfonts/'
+);
+
+// load Font Awesome core
+@use 'node_modules/@awesome.me/kit-6d19f17a5c/icons/scss/fontawesome';
+
+// load and make available Font Awesome helpers (mixins, functions, and variables)
+@use 'node_modules/@awesome.me/kit-6d19f17a5c/icons/scss/fa' as fa;
+
+// load individual Font Awesome styles - add only the ones you plan to use in your project. Here is an example of a project using Classic Solid, Brands, Duotone Solid, and Sharp Duotone Solid icons...
+@use 'node_modules/@awesome.me/kit-6d19f17a5c/icons/scss/solid' as fa-solid;
+@use 'node_modules/@awesome.me/kit-6d19f17a5c/icons/scss/brands' as fa-brands;
+@use 'node_modules/@awesome.me/kit-6d19f17a5c/icons/scss/thin' as fa-thin;
+@use 'node_modules/@awesome.me/kit-6d19f17a5c/icons/scss/sharp-duotone' as fa-sharp-duotone;
+// Include any default variable overrides here 
+
+
+$blue:    rgb(11, 42, 70) !default;
+$indigo:  rgb(122, 60, 89) !default;
+$purple:  rgb(107, 25, 64) !default;
+$pink:    #ff3cc7 !default;
+$red:      #e03616 !default;
+$orange:   #f18f01!default;
+$yellow:   #f6f600 !default;
+$green:    #849324 !default;
+$teal:     #48a9a6 !default;
+$cyan:     #048ba8 !default;
+// scss-docs-end color-variables
+$primary:       $blue;
+$secondary:     $purple;
+$warning:       $orange; 
+
+$font-family-sans-serif: "Muli", Arial, sans-serif;
+$font-family-serif: 'Spectral', serif;
+$headings-font-family: "Zing Rust Base", serif;
+$font-size-base: 1.25rem;
+
+$blockquote-margin-y:         0;
+$color-mode-type: data;
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+
+body{
+	background-color: $primary;
+}
+
+main{
+	background-color: white;
+	padding: 2rem;
+}
+
+.site-title {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.site-title h1 {
+	text-align: left;
+	color: $white;
+	margin-bottom: 0;
+	font-size: 4rem;
+	font-family: $headings-font-family;
+	line-height: 1;
+}
+
+@include media-breakpoint-down(md){
+	.site-title h1 {
+		color: $white;
+		margin-bottom: 0;
+		font-size: 3rem;
+		font-family: $headings-font-family;;
+		line-height: 1.5;
+		padding-top: 10px;
+		text-align: center;
+		font-weight: bold;
+	}
+} 
+
+#parent-unit{
+	font-family: $headings-font-family;
+	font-size: 2rem;
+	color: $white;
+}
+
+#page-title{
+	border-bottom: .25rem solid $primary;
+	margin-bottom: 2rem;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+	font-family: $font-family-sans-serif;
+	color: $white;
+}
+
+footer{
+	margin-top: 1rem;
+	background-color:$primary;
+	color:$white;
+}
+
+footer .main-footer{
+	padding: 1rem;
+}
+
+footer a{
+	color: $white;
+	text-decoration: none;
+}
+
+footer a:hover{
+	color: $white;
+	text-decoration: underline;
+}
+
+.main-footer .social{
+	font-size: 1.25rem;
+}
+
+#footer-org-name{
+	display: block;
+}
+
+#footer-org-name img{
+	-webkit-filter: brightness(0) invert(1);
+	filter: brightness(0) invert(1);
+	margin-bottom: 1rem;
+}
+
+.main-footer .nav-link{
+	color: $white;
+}
+
+.main-footer nav h2{
+	font-size: 1.5rem;
+	text-transform: uppercase; 
+}
+
+blockquote{
+	font-family: $font-family-serif;
+	margin-left: 2rem;
+	padding-left: 1rem;
+	border-left: 3px solid $gray-300; 
+}
+
+.blockquote-footer{
+	color: $white;
+}
+
+code {
+	background-color: #e5e5e5;
+	padding: 2px 4px;
+}
+
+.nav-list-home{
+	border-top: 1px solid $gray-600 !important;
+}
+
+.dropdown-item.active, .dropdown-item:active{
+  background-color: $primary;
+}
+
+.list-group-item.active{
+	background-color: $primary;
+	border-color: $primary;
+}
+
+@include color-mode("bennett"){
+	$blue:    rgb(11, 42, 70);
+	$indigo:  rgb(122, 60, 89);
+	$purple:  red;
+	$pink:    #ff3cc7;
+	$red:      #e03616;
+	$orange:   #f18f01;
+	$yellow:   #FFB81C;
+	$green:    #849324;
+	$teal:     #48a9a6;
+	$cyan:     #048ba8;
+	// scss-docs-end color-variables
+	$primary:       $yellow;
+	$secondary:     $black;
+	$warning:       $orange; 
+	body{
+		background-color: $primary;
+	}
+	
+	footer{
+		margin-top: 1rem;
+		background-color:$primary;
+		color:$white;
+	}
+
+}
+

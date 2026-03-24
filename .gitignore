@@ -131,3 +131,5 @@ typings/
 
 
 scss/.sass-cache
+.npmrc
+.sass-cache

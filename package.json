@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@awesome.me/kit-6d19f17a5c": "^1.0.5",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.4"
   }
