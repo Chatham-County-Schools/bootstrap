@@ -20,23 +20,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,600;1,700;1,800&display=swap');
 
-@use 'node_modules/@awesome.me/kit-6d19f17a5c/scss/variables' with (
-  // customizing $font-path
-  $font-path: 'fontawesome/webfonts/'
-);
-
-// load Font Awesome core
-@use 'node_modules/@awesome.me/kit-6d19f17a5c/icons/scss/fontawesome';
-
-// load and make available Font Awesome helpers (mixins, functions, and variables)
-@use 'node_modules/@awesome.me/kit-6d19f17a5c/icons/scss/fa' as fa;
-
-// load individual Font Awesome styles - add only the ones you plan to use in your project. Here is an example of a project using Classic Solid, Brands, Duotone Solid, and Sharp Duotone Solid icons...
-@use 'node_modules/@awesome.me/kit-6d19f17a5c/icons/scss/solid' as fa-solid;
-@use 'node_modules/@awesome.me/kit-6d19f17a5c/icons/scss/brands' as fa-brands;
-@use 'node_modules/@awesome.me/kit-6d19f17a5c/icons/scss/thin' as fa-thin;
-@use 'node_modules/@awesome.me/kit-6d19f17a5c/icons/scss/sharp-duotone' as fa-sharp-duotone;
-// Include any default variable overrides here 
 
 
 $blue:    rgb(11, 42, 70) !default;
@@ -72,7 +55,7 @@ body{
 
 main{
 	background-color: white;
-	padding: 2rem;
+	padding: 2rem !important;
 }
 
 .site-title {
